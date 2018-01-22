@@ -100,4 +100,12 @@ public class IntArrayWorker
     }
   }
  
+  public int getColTotal(int column)
+  {
+	  int colTotal = 0;
+	  
+	  return colTotal;
+  }
+  
+  }
 }

@@ -38,8 +38,12 @@ public class IntArrayWorkerTester
   {
     IntArrayWorker worker = new IntArrayWorker();
     int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+    
+    // for each loop cannot change the content
     worker.setMatrix(nums2);
     int total = worker.getTotal();
+    
+    
     System.out.println("Total should be 21 and is " + total);
   }
   
@@ -78,28 +82,28 @@ public class IntArrayWorkerTester
 //    System.out.println("Largest should be 6 and is " + largest);
 //  }
   
-  /** Method to test getColTotal */
-//  public static void testGetColTotal()
-//  {
-//    IntArrayWorker worker = new IntArrayWorker();
-//    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
-//    worker.setMatrix(nums2);
-//    int total = worker.getColTotal(0);
-//    System.out.println("Total for column 0 should be 5 and is " + total);
-//    total = worker.getColTotal(1);
-//    System.out.println("Total for column 1 should be 7 and is " + total);
-//    total = worker.getColTotal(2);
-//    System.out.println("Total for column 2 should be 9 and is " + total);
-//  }
+  /** Method to test getColTotal */ //Has to be public for other methods to access it. ForEach loop. COMPILE. Need to call method
+  public static void testGetColTotal()
+  {
+    IntArrayWorker worker = new IntArrayWorker();
+    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
+    worker.setMatrix(nums2);
+    int total = worker.getColTotal(0);
+    System.out.println("Total for column 0 should be 5 and is " + total);
+    total = worker.getColTotal(1);
+    System.out.println("Total for column 1 should be 7 and is " + total);
+    total = worker.getColTotal(2);
+    System.out.println("Total for column 2 should be 9 and is " + total);
+  }
   
   public static void main(String[] args)
   {
-    testSetMatrix();
-    testFillPattern1();
+    //testSetMatrix();
+   // testFillPattern1();
     //testGetCount(); 
-    testGetTotal();
-    testGetTotalNested();
+    //testGetTotal();
+    //testGetTotalNested();
     //testGetLargest();
-    //testGetColTotal();
+    testGetColTotal();
   }
 }
