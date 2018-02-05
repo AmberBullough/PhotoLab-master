@@ -145,19 +145,20 @@ public class Picture extends SimplePicture
   
   public void glitchFilter()
   {
+	  Pixel [] [] pixels = this.getPixels2D();
 	  Pixel leftPixel = null;
 	  Pixel rightPixel = null;
-	  Pixel [] [] pixels = this.getPixels2D();
-	  double percentage = .35;
-	  int shift = (int) (percentage * pixels[0].length);
+	  int width = pixels[0].length;
+	  int shift = (int) (.35 * pixels[0].length);
 	  
 	  for(int rows = 0; rows < pixels.length; rows++)
 	  {
 		for(int cols = 0; cols < pixels[0].length; cols++)
 		{
 			int col = 1;
-			leftPixel = pixels[rows][shift % cols];
-			rightPixel = pixels[rows][cols];
+			leftPixel = pixels[rows][cols];
+			rightPixel = pixels[rows][width - shift];
+			Color tempColor = leftPixel.getColor();
 			leftPixel.setColor(rightPixel.getColor());
 			
 		}
