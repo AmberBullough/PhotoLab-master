@@ -18,6 +18,13 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testGengar()
+  {
+	  Picture gengar = new Picture("CumberlandIsland.jpg");
+	  gengar.explore();
+	  gengar.gengarFilter(gengar.getHeight() / 2, gengar.getWidth() / 2);
+	  gengar.explore();
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -25,6 +32,14 @@ public class PictureTester
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+	  Picture caterpillar = new Picture("caterpillar.jpg");
+	  caterpillar.explore();
+	  caterpillar.mirrorHorizontal();
+	  caterpillar.explore();
   }
   
   /** Method to test mirrorTemple */
@@ -54,12 +69,25 @@ public class PictureTester
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
+  
+  public static void testGlitchFilter()
+  {
+	  Picture arch = new Picture("arch.jpg");
+	    arch.explore();
+	    arch.glitchFilter();
+	    arch.explore();
+  }
+  
   public static void main(String[] args)
   {
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	  
+	testGengar();
     testZeroBlue();
+    testMirrorHorizontal();
+    testGlitchFilter();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
@@ -67,7 +95,7 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
