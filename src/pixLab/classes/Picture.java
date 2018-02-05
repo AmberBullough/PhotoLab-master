@@ -148,6 +148,20 @@ public class Picture extends SimplePicture
 	  Pixel leftPixel = null;
 	  Pixel rightPixel = null;
 	  Pixel [] [] pixels = this.getPixels2D();
+	  double percentage = .35;
+	  int shift = (int) (percentage * pixels[0].length);
+	  
+	  for(int rows = 0; rows < pixels.length; rows++)
+	  {
+		for(int cols = 0; cols < pixels[0].length; cols++)
+		{
+			int col = 1;
+			leftPixel = pixels[rows][shift % cols];
+			rightPixel = pixels[rows][cols];
+			leftPixel.setColor(rightPixel.getColor());
+			
+		}
+	  }
   }
   
   public void mirrorHorizontal()
