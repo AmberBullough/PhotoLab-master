@@ -84,9 +84,9 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 	  
-	//testGengar();
-    //testZeroBlue();
-    //testMirrorHorizontal();
+	testGengar();
+    testZeroBlue();
+    testMirrorHorizontal();
     testGlitchFilter();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
@@ -94,8 +94,8 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorVertical();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
