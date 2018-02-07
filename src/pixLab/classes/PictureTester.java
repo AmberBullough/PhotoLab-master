@@ -78,6 +78,10 @@ public class PictureTester
 	    arch.explore();
   }
   
+  public static void testRedAndBlue()
+  {
+	  
+  }
   public static void main(String[] args)
   {
     // uncomment a call here to run a test

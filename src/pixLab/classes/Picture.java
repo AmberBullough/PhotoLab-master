@@ -232,7 +232,10 @@ public class Picture extends SimplePicture
     }   
   }
 
-  
+  public void redAndBlue(int startRow, int startCol)
+  {
+	  
+  }
   
   
   
