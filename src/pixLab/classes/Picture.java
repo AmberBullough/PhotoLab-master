@@ -155,23 +155,29 @@ public class Picture extends SimplePicture
 	  
 	  for(int rows = 0; rows < pixels.length; rows++)
 	  {
+		  Color [] currentColors = new Color[pixels[0] .length];
+		  for (int cols = 0; cols < pixels[rows].length; cols++)
+			{
+			currentColors[cols] = pixels[rows][cols].getColor();
+			}
+		  
 		for(int cols = 0; cols < pixels[0].length; cols++)
 		{
+			 pixels[rows][cols].setColor(currentColors[(cols +shift) % width]);
+			//leftPixel = pixels[rows][cols];
+			//rightPixel = pixels[rows][(width - shift + cols) % width];
+			//midPixel = pixels [rows] [(cols + shift) % width];
+			//endPixel = pixels [rows][width % (cols + shift)];
 			
-			leftPixel = pixels[rows][cols];
-			rightPixel = pixels[rows][(width - shift + cols) % width];
-			midPixel = pixels [rows] [(cols + shift) % width];
-			endPixel = pixels [rows][width % (cols + shift)];
+			//Color leftColor = leftPixel.getColor();
+			//Color rightColor = rightPixel.getColor();
+			//Color midColor = midPixel.getColor();
+			//Color endColor = endPixel.getColor();
 			
-			Color leftColor = leftPixel.getColor();
-			Color rightColor = rightPixel.getColor();
-			Color midColor = midPixel.getColor();
-			Color endColor = endPixel.getColor();
-			
-			leftPixel.setColor(rightColor);
-			rightPixel.setColor(midColor);
-			midPixel.setColor(leftColor);
-			endPixel.setColor(endColor);
+			//leftPixel.setColor(rightColor);
+			//rightPixel.setColor(midColor);
+			//midPixel.setColor(leftColor);
+			//endPixel.setColor(endColor);
 			
 			
 		}
