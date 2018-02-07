@@ -72,7 +72,7 @@ public class PictureTester
   
   public static void testGlitchFilter()
   {
-	  Picture arch = new Picture("beach.jpg");
+	  Picture arch = new Picture("whiteFlower.jpg");
 	    arch.explore();
 	    arch.glitchFilter();
 	    arch.explore();
