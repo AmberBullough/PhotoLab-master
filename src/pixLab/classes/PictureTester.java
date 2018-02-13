@@ -72,15 +72,26 @@ public class PictureTester
   
   public static void testGlitchFilter()
   {
-	  Picture arch = new Picture("whiteFlower.jpg");
-	    arch.explore();
-	    arch.glitchFilter();
-	    arch.explore();
+	  Picture flores = new Picture("whiteFlower.jpg");
+	    flores.explore();
+	    flores.glitchFilter();
+	    flores.explore();
   }
   
   public static void testRedAndBlue()
   {
-	  
+	  Picture flores = new Picture("whiteFlower.jpg");
+	  flores.explore();
+	  flores.redAndBlue(120, 200);
+	  flores.explore();
+  }
+  
+  public static void testMirrorRAB()
+  {
+	  Picture flores = new Picture("whiteFlower.jpg");
+	  flores.explore();
+	  flores.mirrorRAB();
+	  flores.explore();
   }
   public static void main(String[] args)
   {
@@ -88,18 +99,20 @@ public class PictureTester
     // and comment out the ones you don't want
     // to run
 	  
-	testGengar();
+	//testGengar();
     testZeroBlue();
-    testMirrorHorizontal();
+   // testMirrorHorizontal();
     testGlitchFilter();
+    testRedAndBlue();
+    testMirrorRAB();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
-    testMirrorTemple();
+    //testMirrorVertical();
+    //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
