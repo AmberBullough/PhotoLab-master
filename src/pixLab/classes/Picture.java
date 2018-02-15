@@ -248,29 +248,26 @@ public class Picture extends SimplePicture
  
   public void mirrorRAB()
   {
-	  Pixel [] [] pixels = this.getPixels2D();
-	  Pixel leftPixel = null;
-	  Pixel rightPixel = null;
-	  Pixel midPixel = null;
-	  Pixel endPixel = null;
-	  int width = pixels[0].length;
-	  int shift = (int) (.35 * pixels[0].length);
-	  
-	  for(int rows = 0; rows < pixels.length; rows++)
-	  {
-		  Color [] currentColors = new Color[pixels[0] .length];
-		  for (int cols = 0; cols < pixels[rows].length; cols++)
-			{
-			currentColors[cols] = pixels[rows][cols].getColor();
-			}
-		  
-		for(int cols = 0; cols < pixels[0].length; cols++)
-		{
-			 pixels[rows][cols].setColor(currentColors[(cols +shift) % width]);
-			 rightPixel.setRed(0);
-			 rightPixel.setBlue(0);
+	  int mirrorPoint = 276;
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int count = 0;
+	    Pixel[][] pixels = this.getPixels2D();
+	    
+	    // loop through the rows
+	    for (int row = 27; row < 97; row++)
+	    {
+	      // loop from 13 to just before the mirror point
+	      for (int col = 13; col < mirrorPoint; col++)
+	      {
+	        
+	        leftPixel = pixels[row][col];      
+	        rightPixel = pixels[row]                       
+	                         [mirrorPoint - col + mirrorPoint];
+	        rightPixel.setRed(0);
+	        rightPixel.setBlue(0);
+	      }
 	    }
-	  }
   }
   
   

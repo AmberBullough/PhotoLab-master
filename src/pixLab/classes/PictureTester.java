@@ -93,6 +93,7 @@ public class PictureTester
 	  flores.mirrorRAB();
 	  flores.explore();
   }
+  
   public static void main(String[] args)
   {
     // uncomment a call here to run a test
@@ -100,7 +101,7 @@ public class PictureTester
     // to run
 	  
 	//testGengar();
-    testZeroBlue();
+    //testZeroBlue();
    // testMirrorHorizontal();
     testGlitchFilter();
     testRedAndBlue();
